@@ -1,0 +1,20 @@
+ol {
+  counter-reset: item;
+  list-style-type: none;
+  padding-left: 32px;
+}
+li {
+  display: block;
+  line-height: 28.8px;
+}
+li:before {
+  content: counter(item) "  ";
+  counter-increment: item;
+  padding-right: 13.6px;
+}
+a{
+  color: #95DAF3;
+  text-decoration: underline;
+  font-size: 16px;
+}
+
