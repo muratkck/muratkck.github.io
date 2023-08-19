@@ -16,3 +16,14 @@ h2{
   margin-bottom: 12.8px;
   margin-top: 48px;
 }
+figure{
+  text-align: center;
+  height: 200px;  
+  margin: 0;
+}
+.profile_picture{
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  object-fit: cover;
+}

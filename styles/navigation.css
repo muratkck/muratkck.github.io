@@ -1,20 +1,19 @@
-ol {
+.contents_table ol {
   counter-reset: item;
   list-style-type: none;
   padding-left: 32px;
 }
-li {
+.contents_table li {
   display: block;
   line-height: 28.8px;
 }
-li:before {
+.contents_table li:before {
   content: counter(item) "  ";
   counter-increment: item;
   padding-right: 13.6px;
 }
-a{
+.contents_table a{
   color: #95DAF3;
   text-decoration: underline;
   font-size: 16px;
 }
-

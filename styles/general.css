@@ -2,6 +2,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  font-family: Mukta, Arial;
   margin: 0 auto;
   height: 1000px;
   background-color: #2d2d2d;
@@ -10,6 +11,8 @@ body {
   width: 595.2px;
   max-width: 595.2px;
 }
-.title_picture {
+title img{
+  height: 6px;
+  border-radius: 4px;
   object-fit: cover;
 }
