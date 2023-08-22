@@ -1,19 +1,98 @@
-.bookmarks ul{
-  list-style-type: symbols(#95DAF3);
+.bookmarks ul {
+  list-style-type: symbols(#95daf3);
   line-height: 28.8px;
 }
 
-.bookmarks li:before{
+.bookmarks li:before {
   content: " ";
   padding-right: 13.6px;
 }
 .bookmarks a,
-.curriculum_vitae a{
-  color: #95DAF3;
+.curriculum_vitae a,
+.social_medias a {
+  color: #95daf3;
   text-decoration: none;
   font-size: 16px;
 }
-.about_me .department{
-  font-family: 'Times New Roman', Times, serif;
+.about_me .department {
+  font-family: Arial;
   font-style: italic;
+}
+.social_medias {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+}
+.social_medias button {
+  width: 25px;
+  margin-right: 12px;
+  margin-left: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.social_medias .pictures {
+  width: 25px;
+  cursor: grab;
+  transition: width 0.3s;
+}
+
+/*
+moved to social medias button
+.social_medias 
+.link_to_linkedin,
+.link_to_instagram,
+.link_to_mail,
+.link_to_twitter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+*/
+
+.social_medias .pictures:hover {
+  width: 32px;
+}
+.social_medias .pictures:active {
+  cursor: grabbing;
+}
+.mail_button,
+.linkedin_button,
+.instagram_button,
+.twitter_button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #2d2d2d;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+}
+.mail_button .tooltip,
+.linkedin_button .tooltip,
+.instagram_button .tooltip,
+.twitter_button .tooltip {
+  position: absolute;
+  background-color: gray;
+  color: white;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 8px;
+  padding-left: 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  bottom: -35px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.mail_button:hover .tooltip,
+.linkedin_button:hover .tooltip,  
+.instagram_button:hover .tooltip,
+.twitter_button:hover .tooltip {
+  opacity: 1;
 }
