@@ -7,6 +7,7 @@
   content: " ";
   padding-right: 13.6px;
 }
+
 .bookmarks a,
 .curriculum_vitae a,
 .social_medias a {
@@ -15,6 +16,7 @@
   font-size: 16px;
   height: 25px;
 }
+
 .about_me .department {
   font-family: 'Times New Roman';
   font-style: italic;
@@ -99,4 +101,16 @@ moved to social medias button
 .instagram_button:hover .tooltip,
 .twitter_button:hover .tooltip {
   opacity: 1;
+}
+
+a.world_history:visited,
+a.news:visited,
+a.greek_legends_myths:visited,
+a.leetcode:visited,
+a.data_structures_algorithms:visited,
+a.atlantic:visited,
+a.art_humanities:visited,
+a.harpers:visited
+{
+  color: rgb(57, 120, 154);
 }
