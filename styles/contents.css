@@ -10,7 +10,8 @@
 
 .bookmarks a,
 .curriculum_vitae a,
-.social_medias a {
+.social_medias a,
+.simple_projects a {
   color: #95daf3;
   text-decoration: none;
   font-size: 16px;
@@ -103,14 +104,8 @@ moved to social medias button
   opacity: 1;
 }
 
-a.world_history:visited,
-a.news:visited,
-a.greek_legends_myths:visited,
-a.leetcode:visited,
-a.data_structures_algorithms:visited,
-a.atlantic:visited,
-a.art_humanities:visited,
-a.harpers:visited
-{
+.bookmarks a:visited,
+.curriculum_vitae a:visited,
+.simple_projects a:visited{
   color: rgb(57, 120, 154);
 }
