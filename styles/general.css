@@ -4,12 +4,10 @@ html {
 body {
   font-family: Mukta, Arial;
   margin: 0 auto;
-  height: 1500px;
+  height: 1650px;
   background-color: #2d2d2d;
   color: #ccc;
   padding: 32px 20px;
-  width: 595.2px;
-  max-width: 595.2px;
+  margin-inline: auto;
+  width: min(90%, 595.2px);
 }
-
-
