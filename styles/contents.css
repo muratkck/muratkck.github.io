@@ -45,20 +45,6 @@
   transition: width 0.3s;
 }
 
-/*
-moved to social medias button
-.social_medias 
-.link_to_linkedin,
-.link_to_instagram,
-.link_to_mail,
-.link_to_twitter {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-}
-*/
-
 .social_medias .pictures:hover {
   width: 32px;
 }
