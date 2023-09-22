@@ -1,20 +1,31 @@
 html {
   scroll-behavior: smooth;
 }
-
-body {
-  font-family: Mukta, Arial;
-  margin: 0 auto;
-  height: 1650px;
+body{
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  left: 0;
   background-color: #2d2d2d;
-  color: #ccc;
-  padding: 32px 20px;
-  margin-inline: auto;
-  width: min(100%, 595.2px);
 }
 
-@media (max-width: 768px){
-  body{
+
+.all_contents {
+  position: relative;
+  font-family: Mukta, Arial;
+  margin-top: 25px;
+  background: transparent;
+  color: #ccc;
+  margin-bottom: 20px;
+  z-index: 2;
+  padding: 32px 20px;
+  width: min(80%, 595.2px);
+}
+
+/* @media (max-width: 768px){
+  .all_contents{
     width: 80%;
   }
-}
+} */

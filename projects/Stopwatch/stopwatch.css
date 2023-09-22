@@ -1,0 +1,87 @@
+body{
+  font-family: Arial;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: url("watch-picture.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.main-container{
+  position: absolute;
+  display: grid;
+  background: transparent;
+  backdrop-filter: blur(15px);
+  color: white;
+  width: 500px;
+  grid-template-rows: 250px 10px 250px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 400px;
+  transition: all 0.2s;
+}
+.main-container:hover {
+  box-shadow: 0 0 10px rgba(173, 255, 47, 0.2);
+  width: 520px;
+  grid-template-rows: 255px 10px 255px;
+  
+}
+
+.time_stopwatch_container{
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  font-size: 84px;
+  border-radius: 120px;
+  bottom: -75px;
+}
+.time_stopwatch{
+  text-align: center;
+  width: 100%;
+}
+
+.button-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.start-button,
+.reset-button,
+.stop-button{
+  text-align: center;
+  color: white;
+  border: none;
+  height: 75px;
+  width: 75px;
+  border-radius: 38px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.start-button{
+  background-color: rgb(10, 69, 10);
+  color: greenyellow;
+  transition: all 0.2s;
+}
+.stop-button{
+  background-color: rgb(70, 10, 10);
+  color: rgb(255, 20, 47);
+  transition: all 0.2s;
+}
+.reset-button{
+  background-color: rgb(232, 173, 64);
+  color: rgb(132, 35, 0);
+  transition: all 0.2s;
+}
+.stop-button:hover{
+  box-shadow: 0 0 10px rgba(255, 20, 47, 0.8);
+}
+.start-button:hover {
+  box-shadow: 0 0 10px rgba(173, 255, 47, 0.8);
+}
+.reset-button:hover {
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.8);
+}

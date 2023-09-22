@@ -32,7 +32,9 @@ body{
 }
 
 .reset_button,
-.auto_play_button{
+.auto_play_button,
+.confirmation_button_no,
+.confirmation_button_yes{
   background-color: white;
   padding: 8px 15px;
   font-size: 15px;

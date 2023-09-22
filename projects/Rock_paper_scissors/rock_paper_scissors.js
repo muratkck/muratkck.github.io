@@ -15,14 +15,10 @@ document.querySelector('.paper_button').addEventListener('click', () => {
 document.querySelector('.scissors_button').addEventListener('click', () => {
   playGame('scissors');
 });
-document.querySelector('.js_reset_button').addEventListener('click', () => {
-  score.wins = 0;
-  score.losses = 0;
-  score.ties = 0;
-  localStorage.removeItem('score');
-  updateScoreElements();
+document.querySelector('.reset_button').addEventListener('click', () => {
+  checkReset();
 });
-document.querySelector('.js_auto_play_button').addEventListener('click', () => {
+document.querySelector('.auto_play_button').addEventListener('click', () => {
   autoPlay();
 });
 
@@ -36,7 +32,43 @@ document.body.addEventListener('keydown', (event) => {
   else if(event.key === 's'){
     playGame('scissors');
   }
+  else if(event.key === 'a'){
+    autoPlay();
+  }
+  else if(event.key === ' '){
+    checkReset();
+  }
 });
+
+function checkReset(){
+
+  if(!(score.wins === 0 && score.losses === 0 && score.ties ===0)){
+    document.querySelector('.confirmation_message')
+    .innerHTML = `Are you sure you want to reset the score?
+    <button class="confirmation_button_yes js_confirmation_button_yes">Yes</button> 
+    <button class="confirmation_button_no js_confirmation_button_no">No</button>`;
+  
+    document.querySelector('.js_confirmation_button_yes').addEventListener('click', () => {
+      hideConfirmationMessage();
+      resetScore();
+    });
+    document.querySelector('.js_confirmation_button_no').addEventListener('click', () => {
+      hideConfirmationMessage();
+    });
+  }
+}
+function hideConfirmationMessage(){
+  document.querySelector('.confirmation_message')
+  .innerHTML = '';
+}
+
+function resetScore(){
+  score.wins = 0;
+  score.losses = 0;
+  score.ties = 0;
+  localStorage.removeItem('score');
+  updateScoreElements();
+}
 
 
 let intervalId;
@@ -44,7 +76,7 @@ let isAutoPlay = false;
 function autoPlay(){
   
   if(!isAutoPlay){
-    document.querySelector('.auto_play_button').innerHTML = 'Stop Playing';
+    document.querySelector('.auto_play_button').innerHTML = 'Stop Play';
     intervalId = setInterval(() => {
       playGame(pickComputerMove());
     }, 1000);

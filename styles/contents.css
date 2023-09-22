@@ -58,7 +58,10 @@
   position: relative;
   display: flex;
   align-items: center;
+  /*
   background-color: #2d2d2d;
+  */
+  background: transparent;
   border: none;
   align-items: center;
   justify-content: center;
