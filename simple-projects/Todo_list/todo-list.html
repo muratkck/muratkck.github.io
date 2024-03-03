@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
     <title>Todo List</title>
     <link rel="stylesheet" href="todo_list.css">
+    <link
+    rel="icon"
+    type="image/png"
+    href="todo-images/title-icon.png"
+  />
   </head>
   <body>
-    <p>Todo List</p>
-    <div class="todo_input_grid">
-      <input class="js_name_input name_input" placeholder="Todo name">
-      <input class="js_due_date_input due_date_input" type="date">
-      <button class="add_button js_add_button">Add</button>
+    <div class="container">
+      <div class="todo-app">
+        <h2>To-Do List <img src="todo-images/icon.png"></h2>
+        <div class="row">
+          <input type="text" id="input-box" placeholder="Add your task">
+          <button onclick="addTask()">Add</button>
+        </div>
+        <ul id="list-container">
+        </ul>
+      </div>
     </div>
-    <div class="js_todo_list todo_grid"></div>
-
     <script src="todo_list.js"></script>
   </body>
 </html>

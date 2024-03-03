@@ -1,53 +1,37 @@
-const todoList = JSON.parse(localStorage.getItem('todo_list')) || [];
+const inputBox = document.getElementById("input-box");
+const listContainer = document.getElementById("list-container");
 
-renderTodoList();
-
-document.querySelector('.js_add_button').addEventListener('click', () => {
-  addTodo();
-});
-
-
-function renderTodoList(){
-  let todoListHTML = '';
-  todoList.forEach((todoObject, index) => {
-    const { name, dueDate } = todoObject;
-
-    // Generating the html technique.
-    const html = `
-    <div>${name}</div>
-    <div>${dueDate}</div>
-    <button class="delete_button js_delete_button">Delete</button>
-    `;
-    todoListHTML += html;
-    localStorage.setItem('todo_list', JSON.stringify(todoList));
-  });
-  document.querySelector('.js_todo_list').innerHTML = todoListHTML;
-
-  // querySelectorALl returns the list of all elements that has the given class name.
-  document.querySelectorAll('.js_delete_button')
-    .forEach((deleteButton, index) => {
-      deleteButton.addEventListener('click', () => {
-        todoList.splice(index, 1);
-        localStorage.setItem('todo_list', JSON.stringify(todoList));
-        renderTodoList();
-      });
-    }); 
+function addTask(){
+  if(inputBox.value === ''){
+    alert("You must write something!");
+  }
+  else{
+    let li = document.createElement("li");
+    li.innerHTML = inputBox.value;
+    listContainer.appendChild(li);
+    let span = document.createElement("span");
+    span.innerHTML = "\u00d7";
+    li.appendChild(span);
+  }
+  inputBox.value = "";
+  saveData();
 }
 
+listContainer.addEventListener("click", function(e){
+  if(e.target.tagName === "LI"){
+    e.target.classList.toggle("checked");
+    saveData();
+  }
+  else if(e.target.tagName === "SPAN"){
+    e.target.parentElement.remove();  
+    saveData();
+  }
+}, false);
 
-function addTodo(){
-  const inputElement = document.querySelector('.js_name_input');
-  const dateInputElement = document.querySelector('.js_due_date_input');
-
-  const name = inputElement.value;
-  const dueDate = dateInputElement.value;
-
-  todoList.push({
-    name: name,
-    dueDate: dueDate,
-  });
-
-  inputElement.value = '';
-
-  renderTodoList();
+function saveData(){
+  localStorage.setItem("data", listContainer.innerHTML);
 }
+function displayTasks(){
+  listContainer.innerHTML = localStorage.getItem("data");
+}
+displayTasks();
