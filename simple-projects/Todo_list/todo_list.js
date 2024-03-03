@@ -34,4 +34,13 @@ function saveData(){
 function displayTasks(){
   listContainer.innerHTML = localStorage.getItem("data");
 }
+
+const input = document.getElementById("input-box");
+input.addEventListener("keypress", myFunction);
+
+function myFunction() {
+  if(event.keyCode === 13)
+  addTask();
+  saveData();
+}
 displayTasks();
