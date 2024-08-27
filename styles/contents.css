@@ -11,7 +11,8 @@
 .bookmarks a,
 .curriculum_vitae a,
 .social_medias a,
-.simple_projects a {
+.simple_projects a,
+.about-me a {
   color: #95daf3;
   text-decoration: none;
   font-size: 16px;
@@ -19,7 +20,7 @@
 }
 
 .about_me .department {
-  font-family: 'Times New Roman';
+  font-family: "Times New Roman";
   font-style: italic;
   text-decoration: underline;
 }
@@ -87,7 +88,7 @@
   white-space: nowrap;
 }
 .mail_button:hover .tooltip,
-.linkedin_button:hover .tooltip,  
+.linkedin_button:hover .tooltip,
 .instagram_button:hover .tooltip,
 .twitter_button:hover .tooltip {
   opacity: 1;
@@ -95,6 +96,7 @@
 
 .bookmarks a:visited,
 .curriculum_vitae a:visited,
-.simple_projects a:visited{
+.simple_projects a:visited,
+.about-me a:visited {
   color: rgb(57, 120, 154);
 }
